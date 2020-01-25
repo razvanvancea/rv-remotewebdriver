@@ -1,4 +1,4 @@
-#Java, Selenium, RemoteWebDriver, Parallel Execution, TestNG, Maven Profiles @RV
+**Java, Selenium, RemoteWebDriver, Parallel Execution, TestNG, Maven Profiles**
 
 This project shows the core concepts of RemoteWebDriver, TestNG, Parallel execution and Maven profiles.
 
