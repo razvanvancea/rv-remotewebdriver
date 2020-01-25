@@ -8,7 +8,6 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -16,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Razvan Vancea
  */
-public class SimpleTest {
+public class ZaleniumTest {
 
     private WebDriver driver;
 
@@ -24,14 +23,18 @@ public class SimpleTest {
     public void setupDriver(ITestContext ctx){
         DesiredCapabilities cap;
         cap = DesiredCapabilities.chrome();
+
         String host = "http://localhost:4444/wd/hub";
+
         String testName = ctx.getCurrentXmlTest().getName();
         cap.setCapability("name", testName);
+
         try {
             this.driver = new RemoteWebDriver(new URL(host), cap);
         } catch (MalformedURLException e){
             e.printStackTrace();
         }
+
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
@@ -55,6 +58,8 @@ public class SimpleTest {
 
         Assert.assertTrue(linuxLogo.isDisplayed());
     }
+
+
 
     @AfterTest
     public void tearDown(){

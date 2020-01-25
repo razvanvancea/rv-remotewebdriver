@@ -7,6 +7,7 @@
     <groupId>org.example</groupId>
     <artifactId>rv-zalenium</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>rv-zalenium</name>
 
 <properties>
     <testng.version>7.1.0</testng.version>
@@ -38,6 +39,7 @@
         <version>${maven.surfire.version}</version>
     </dependency>
 </dependencies>
+
     <profiles>
         <profile>
             <id>parallel</id>
@@ -57,4 +59,5 @@
             </build>
         </profile>
     </profiles>
+
 </project>

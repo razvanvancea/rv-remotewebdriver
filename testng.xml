@@ -1,28 +1,34 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="zalenium tests"  parallel="tests">
+
     <test name="basic1">
         <classes>
-            <class name="SimpleTest"/>
+            <class name="ZaleniumTest"/>
+            <class name="GithubTest"/>
         </classes>
     </test>
+
     <test name="basic2">
         <classes>
-            <class name="SimpleTest"/>
+            <class name="ZaleniumTest"/>
         </classes>
     </test>
+
     <test name="basic3">
         <classes>
-            <class name="SimpleTest"/>
+            <class name="GithubTest"/>
         </classes>
     </test>
+
     <test name="basic4">
         <classes>
-            <class name="SimpleTest"/>
+            <class name="ZaleniumTest"/>
         </classes>
     </test>
+
     <test name="basic5">
         <classes>
-            <class name="SimpleTest"/>
+            <class name="GithubTest"/>
         </classes>
     </test>
 </suite>
