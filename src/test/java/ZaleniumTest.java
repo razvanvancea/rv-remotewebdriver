@@ -51,7 +51,7 @@ public class ZaleniumTest {
         WebElement googleFirstResult = driver.findElement(By.cssSelector("#rso a"));
         googleFirstResult.click();
 
-        WebElement dockerLink = driver.findElement(By.linkText("Docker"));
+         WebElement dockerLink = driver.findElement(By.linkText("Docker"));
         dockerLink.click();
 
         WebElement linuxLogo = driver.findElement(By.cssSelector("i.fa.fa-linux"));
