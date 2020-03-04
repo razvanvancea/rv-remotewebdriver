@@ -1,21 +1,17 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author Razvan Vancea
- */
-public class GithubTest {
+public class BaseTest {
 
-    private WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeTest
     public void setupDriver(ITestContext ctx){
@@ -34,16 +30,6 @@ public class GithubTest {
         }
 
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-    }
-
-    @Test
-    public void assertGithubRepoTitle(){
-        driver.get("https://github.com/razvanvancea");
-
-        String currentTitle = driver.getTitle();
-        String expectedTitle = "razvanvancea (RV) · GitHub";
-
-        Assert.assertEquals(currentTitle, expectedTitle);
     }
 
     @AfterTest
