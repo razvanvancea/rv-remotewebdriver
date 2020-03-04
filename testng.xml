@@ -3,8 +3,7 @@
 
     <test name="basic1">
         <classes>
-            <class name="ZaleniumTest"/>
-            <class name="GithubTest"/>
+            <class name="GoogleTest"/>
         </classes>
     </test>
 
@@ -16,19 +15,7 @@
 
     <test name="basic3">
         <classes>
-            <class name="GithubTest"/>
-        </classes>
-    </test>
-
-    <test name="basic4">
-        <classes>
-            <class name="ZaleniumTest"/>
-        </classes>
-    </test>
-
-    <test name="basic5">
-        <classes>
-            <class name="GithubTest"/>
+            <class name="GoogleTest"/>
         </classes>
     </test>
 </suite>
