@@ -7,7 +7,7 @@ public class ZaleniumTest extends BaseTest {
 
     @Test
     public void assertZaleniumDocs(){
-        driver.get(baseUrl);
+        driver.get(BASE_URL);
 
         WebElement searchField = driver.findElement(By.name("q"));
         searchField.sendKeys("Zalenium docs");
