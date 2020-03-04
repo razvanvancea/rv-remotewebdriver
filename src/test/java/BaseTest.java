@@ -1,6 +1,9 @@
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -12,10 +15,10 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
     protected WebDriver driver;
-    protected String baseUrl = "https://www.google.ro";
+    protected final String BASE_URL = "https://www.google.ro";
 
     @BeforeTest
-    public void setupDriver(ITestContext ctx){
+    public void setupDriver(ITestContext ctx) {
         DesiredCapabilities cap;
         cap = DesiredCapabilities.chrome();
 
@@ -26,7 +29,7 @@ public class BaseTest {
 
         try {
             this.driver = new RemoteWebDriver(new URL(host), cap);
-        } catch (MalformedURLException e){
+        } catch (MalformedURLException e) {
             e.printStackTrace();
         }
 
@@ -35,6 +38,8 @@ public class BaseTest {
 
     @AfterTest
     public void tearDown(){
-        this.driver.quit();
+        if(driver != null){
+            driver.quit();
+        }
     }
 }
