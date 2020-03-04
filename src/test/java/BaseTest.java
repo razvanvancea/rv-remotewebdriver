@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
     protected WebDriver driver;
+    protected String baseUrl = "https://www.google.ro";
 
     @BeforeTest
     public void setupDriver(ITestContext ctx){

@@ -5,7 +5,7 @@ public class GoogleTest extends BaseTest {
 
     @Test
     public void assertTitle(){
-        driver.get("https://www.google.ro/");
+        driver.get(baseUrl);
 
         String currentTitle = driver.getTitle();
         String expectedTitle = "Google";
